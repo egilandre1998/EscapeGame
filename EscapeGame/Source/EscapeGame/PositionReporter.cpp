@@ -12,7 +12,7 @@ UPositionReporter::UPositionReporter()
 	bWantsBeginPlay = true;
 	PrimaryComponentTick.bCanEverTick = true;
 
-	// ...
+	// ... Code som ikkje e generert av Unreal Engine.
 }
 
 
@@ -21,8 +21,11 @@ void UPositionReporter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
-	
+	// ...  Code som ikkje e generert av Unreal Engine.
+
+	FString ObjectPos = GetOwner()->GetActorLocation().ToString();
+	FString ObjectName = GetOwner()->GetName();
+	UE_LOG(LogTemp, Warning, TEXT("%s is at %s"), *ObjectName, *ObjectPos);
 }
 
 
@@ -31,6 +34,8 @@ void UPositionReporter::TickComponent( float DeltaTime, ELevelTick TickType, FAc
 {
 	Super::TickComponent( DeltaTime, TickType, ThisTickFunction );
 
-	// ...
+	// ...  Code som ikkje e generert av Unreal Engine.
+
+
 }
 
